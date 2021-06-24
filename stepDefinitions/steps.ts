@@ -18,7 +18,7 @@ When('I clicked on header link', async () => {
 });
 
 When('you will navigate to angular page', async () => {
-    console.log("Title from new page: " + browser.getCurrentUrl());
+    browser.getTitle().then((title)=>(console.log("Title of the page is  :"+title)));
 });
 
 Then('you will enter {string} in search box', async (searchValue) => {
